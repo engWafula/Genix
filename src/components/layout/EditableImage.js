@@ -2,8 +2,6 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
-import toast from "react-hot-toast";
-import axios from "axios";
 export default function EditableImage({link, setLink}) {
   const [file, setFile] = useState(null);
   const [filename, setFilename] = useState('');
@@ -50,9 +48,12 @@ export default function EditableImage({link, setLink}) {
     formData.append("upload_preset", "upload");
 
     try {
-      const response = await axios.post(
+      const response = await fetch(
         "https://api.cloudinary.com/v1_1/ultronic-software-developers/image/upload",
-        formData
+        {
+         method: 'POST',
+         body:  formData,
+        }
       );
             setLink(response.data.url);
 
