@@ -47,3 +47,13 @@ div.tabs > *.active{
 .flying-button-parent button{
     @apply border-primary bg-primary text-white rounded-full;
 }
+
+.loader {
+    border-top-color: #F13A01;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

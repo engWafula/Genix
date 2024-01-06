@@ -26,3 +26,32 @@ export async function GET(req) {
   }
 
 }
+
+export async function PUT(req) {
+  mongoose.connect(process.env.MONGO_URL);
+
+  const { _id, status } = await req.json();
+
+  if (!_id || !status) {
+    return Response.json({ error: "Missing required parameters" }, { status: 400 });
+  }
+
+  try {
+    let updateFields = { $set: { status } };
+
+    if (status === 'completed') {
+      // If status is 'completed', also update 'paid' to true
+      updateFields.$set.paid = true;
+    }
+
+    const updatedOrder = await Order.findByIdAndUpdate(
+      _id,
+      updateFields,
+      { new: true }
+    );
+
+    return Response.json(updatedOrder);
+  } catch (error) {
+    return Response.json({ error: "Error updating order status" }, { status: 500 });
+  }
+}

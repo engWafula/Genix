@@ -3,6 +3,7 @@ import {CartContext} from "@/components/AppContext";
 import Bars2 from "@/components/icons/Bars2";
 import ShoppingCart from "@/components/icons/ShoppingCart";
 import {signOut, useSession} from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import {useContext, useState} from "react";
 
@@ -47,7 +48,7 @@ export default function Header() {
     <header>
       <div className="flex items-center md:hidden justify-between">
         <Link className="text-primary font-semibold text-2xl" href={'/'}>
-          ST PIZZA
+          <img src="./logo.png"  width={150} height={100} alt="logo"/>
         </Link>
         <div className="flex gap-8 items-center">
           <Link href={'/cart'} className="relative">
@@ -65,21 +66,11 @@ export default function Header() {
           </button>
         </div>
       </div>
-      {mobileNavOpen && (
-        <div
-          onClick={() => setMobileNavOpen(false)}
-          className="md:hidden p-4 bg-gray-200 rounded-lg mt-2 flex flex-col gap-2 text-center">
-          <Link href={'/'}>Home</Link>
-          <Link href={'/menu'}>Menu</Link>
-          <Link href={'/#about'}>About</Link>
-          <Link href={'/#contact'}>Contact</Link>
-          <AuthLinks status={status} userName={userName} />
-        </div>
-      )}
+  
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
           <Link className="text-primary font-semibold text-2xl" href={'/'}>
-            ST PIZZA
+          <img src="./logo.png"  width={230} height={100} alt="logo"/>
           </Link>
           <Link href={'/'}>Home</Link>
           <Link href={'/menu'}>Menu</Link>
@@ -98,6 +89,18 @@ export default function Header() {
           </Link>
         </nav>
       </div>
+
+      {mobileNavOpen && (
+        <div
+          onClick={() => setMobileNavOpen(false)}
+          className="md:hidden p-4 bg-white z-20 absolute w-full shadow-md rounded-lg mt-2 flex flex-col gap-2  overflow-hidden transition-all duration-300 ease-in-out">
+          <Link href={'/'}>Home</Link>
+          <Link href={'/menu'}>Menu</Link>
+          <Link href={'/#about'}>About</Link>
+          <Link href={'/#contact'}>Contact</Link>
+          <AuthLinks status={status} userName={userName} />
+        </div>
+      )}
     </header>
   );
 }

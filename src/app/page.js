@@ -15,10 +15,14 @@ export default function Home() {
         />
         <div className="text-gray-500 max-w-md mx-auto mt-4 flex flex-col gap-4">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni minima odit recusandae. Illum ipsa non repudiandae? Eum ipsam iste quos suscipit tempora? Aperiam esse fugiat inventore laboriosam officiis quam rem!
+          Welcome to Genix's Pastry, where passion for baking meets culinary artistry. At Genix's, we believe that every bite should be a delightful experience, and our commitment to crafting exceptional pastries reflects our dedication to this philosophy.
+
+Founded with a vision to redefine the pastry experience, Genix's is more than just a restaurant; it's a celebration of flavors, textures, and the art of baking. Our team of skilled pastry chefs combines traditional techniques with innovative ideas to create a diverse menu that caters to every palate.          </p>
+          <p>
+          Customer satisfaction is our top priority, and we take pride in delivering an unparalleled level of service. Our knowledgeable and friendly staff is always ready to assist you in choosing the perfect pastry or dessert to suit your cravings.
+
+
           </p>
-          <p>At consectetur delectus ducimus est facere iure molestias obcaecati quaerat vitae voluptate? Aspernatur dolor explicabo iste minus molestiae pariatur provident quibusdam saepe?</p>
-          <p>Laborum molestias neque nulla obcaecati odio quia quod reprehenderit sit vitae voluptates? Eos, tenetur.</p>
         </div>
       </section>
       <section className="text-center my-8" id="contact">
@@ -28,7 +32,7 @@ export default function Home() {
         />
         <div className="mt-8">
           <a className="text-4xl underline text-gray-500" href="tel:+46738123123">
-            +46 738 123 123
+            0704154578
           </a>
         </div>
       </section>
