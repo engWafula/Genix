@@ -12,8 +12,8 @@ export const metadata = {
   description: 'Explore a variety of mouth-watering dishes at Genix Pastry and Restaurant. From delectable pastries to savory restaurant specialties, we offer a delightful culinary experience.',
   keywords: 'Genix Pastry, Genix Restaurant, Delicious Pastries, Gourmet Food, Fine Dining, Culinary Delights, Best Restaurant, Food Experience,Best Restaurant',
   author: 'Genix Pastry and Restaurant',
-  image: 'https://example.com/restaurant-image.jpg', // Replace with the URL of your restaurant's image
-  url: 'https://genixrestaurant.com', // Replace with your website URL
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr_oNciqO3SCY33DCxiW8vGYWVKMlm2JCKNA&usqp=CAU', // Replace with the URL of your restaurant's image
+  url: 'https://genixspastryrestaurant.com', // Replace with your website URL
   siteName: 'Genix Pastry and Restaurant',
   type: 'website',
 };
