@@ -24,7 +24,7 @@ export default function UserTabs({isAdmin}) {
             href={'/menu-items'}
             className={path.includes('menu-items') ? 'active' : ''}
           >
-            Menu Items
+            Menu
           </Link>
           <Link
             className={path.includes('/users') ? 'active' : ''}
@@ -32,6 +32,25 @@ export default function UserTabs({isAdmin}) {
           >
             Users
           </Link>
+          <Link
+            className={path.includes('/analytics') ? 'active' : ''}
+            href={'/analytics'}
+          >
+            Analytics
+          </Link>
+          <Link
+            className={path.includes('/stock') ? 'active' : ''}
+            href={'/stock'}
+          >
+            Stock
+          </Link>
+
+          {/* <Link
+            className={path.includes('/sales') ? 'active' : ''}
+            href={'/sales'}
+          >
+            Sales
+          </Link> */}
         </>
       )}
       <Link

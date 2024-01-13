@@ -1,10 +1,9 @@
 import {model, models, Schema} from "mongoose";
 
 const StockSchema = new Schema({
-    itemName: {
+    name: {
         type: String,
         required: true,
-        unique: true,
       },
       quantity: {
         type: Number,

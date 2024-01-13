@@ -45,10 +45,10 @@ export default function Header() {
     userName = userName.split(' ')[0];
   }
   return (
-    <header>
-      <div className="flex items-center md:hidden justify-between">
+    <header className="sticky top-0 z-50 bg-white">
+      <div className="flex  items-center md:hidden justify-between">
         <Link className="text-primary font-semibold text-2xl" href={'/'}>
-          <img src="./logo.png"  width={150} height={100} alt="logo"/>
+          <img src="./logo.png"  width={100} height={80} alt="logo"/>
         </Link>
         <div className="flex gap-8 items-center">
           <Link href={'/cart'} className="relative">
@@ -70,7 +70,7 @@ export default function Header() {
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
           <Link className="text-primary font-semibold text-2xl" href={'/'}>
-          <img src="./logo.png"  width={230} height={100} alt="logo"/>
+          <img src="./logo.png"  width={100} height={100} alt="logo"/>
           </Link>
           <Link href={'/'}>Home</Link>
           <Link href={'/menu'}>Menu</Link>
