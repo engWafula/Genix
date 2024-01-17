@@ -55,7 +55,9 @@ export default function EditableImage({link, setLink}) {
          body:  formData,
         }
       );
-            setLink(response.data.url);
+
+      const responseData = await response.json()
+           setLink(responseData.url);
 
       //             await toast.promise(response, {
       //   loading: 'Uploading...',
@@ -67,7 +69,7 @@ export default function EditableImage({link, setLink}) {
       console.error(error);
     }
   }
-
+console.log(link,"AM the best")
   return (
     <>
       {link && (
